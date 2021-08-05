@@ -77,17 +77,91 @@ li {
 }
 
 
+/* media query pantalla vertical */
+@media (orientation: portrait) {
+	@media only screen and (max-width: 768px) {
+    ul {
+        height: 96.5vh;
+        overflow: auto;
+    }
+    .lista li {
+        width: 90%;
+        height: auto;
+    }
+    .lista li a {
+        width: 90%;
+		font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    ul {
+        height: 98vh;
+        overflow: auto;
+    }
+    .lista li{
+        width: 70%;
+        height: auto;
+    }
+    .lista li a {
+        width: 70%;
+		font-size: 1.3em;
+    }
+}
+}
+
 /* media query pantalla horizontal */
 @media (orientation: landscape) {
-	body {
-		background: url(fondo-menu2.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-attachment: fixed;
-		justify-content: center;
-		align-items: center;
-		margin: 0px auto;
-		display: flex;
+    @media only screen and (max-width: 768px) {
+        body {
+			background: url(fondo-menu2.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			justify-content: center;
+			align-items: center;
+			margin: 0px auto;
+			display: flex;
+		}
+        ul {
+            height: 93vh;
+            overflow: auto;
+        }
+        .lista li {
+            width: 70%;
+            height: auto;
+        }
+        .lista li a {
+            width: 70%;
+            font-size: 1em;
+        }
+	}
+
+    @media only screen and (min-width: 768px) {
+		body {
+			background: url(fondo-menu2.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			justify-content: center;
+			align-items: center;
+			margin: 0px auto;
+			display: flex;
+		}
+        ul {
+            height: 97vh;
+            overflow: auto;
+        }
+        .lista li {
+            width: 60%;
+            height: auto;
+        }
+        .lista li a {
+            width: 60%;
+            font-size: 1.3em;
+        }
 	}
 }
+
