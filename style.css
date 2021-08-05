@@ -6,34 +6,18 @@
     box-sizing: border-box;
 }
 
-h1{
-	font-size: 2em;
-	width: 90%;
-	text-align: center;
-	font-weight: bold;
-	font-family: sans-serif;
-	color: lightblue;
-	text-shadow: black 2px 2px 2px;
-	margin: 2em auto;
-	padding: 10px;
-}
-
-@media screen and (max-width: 768px) {
-		h1{
-			font-size: 1em;
-		}
-}
-
 body{
 	margin: 0;
+    width: 100%;
 	height: 100%;
-	background: url(fondo.jpg);
+	background: url(fondo-menu.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
 	justify-content: center;
 	align-items: center;
+    padding: 10px;
 }
 
 body::before{
@@ -43,43 +27,67 @@ body::before{
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: linear-gradient(45deg,navy,lightblue,navy,purple,pink,purple);
-	opacity: 0.8;
-	z-index: -5;
+    background: linear-gradient(135deg,navy,lightblue,navy,purple,pink,purple);
+    opacity: 0.8;
+	z-index: -1;
 }
 
-#lista{
-    border-radius: 0.3em;
-    list-style: none;
-    text-align: center; 
-    margin: 1.5em auto;
-    padding: 0.5em;
-    color: white;
-	font-size: 2em;
+/* titulo */
+h1 {
+	padding: 0.5em;
+	text-align: center;
+	color: white;
+	text-shadow: black 1px 1px 1px;
+}
+
+/* contenedor lista */
+.lista {
+    border: solid white 0.5px; 
+    width: 100%;
+    margin: 0px auto;
+}
+
+/* fondo lista de libros */
+.lista li{
 	width: 95%;
-}
-
-@media screen and (max-width: 768px) {
-	#lista{
-		font-size: 1em;
-	}
-}
-
-#lista li{
-    margin: 2.5em auto;
-	width: 100%;
-	background-color: rgb(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+    height: auto;
+    text-align: center;
+    list-style: none;
+    border-radius: 0.2em;
 }
 
 
-#lista li a{
+/* lista de libros */
+.lista li a{
+    list-style: none;
     text-decoration: none;
     color: white;
-    text-shadow: black 1px 1px 1px;
-    font-weight: bold;
-	font-size: 1em;
+    text-shadow: 1px 1px 1px black;
 }
 
-#lista li:hover{
-	background-color:lightblue;
+.lista li a:hover{
+    color: lightblue;
+    text-shadow: 1px 1px 1px black;
+}
+li {
+    margin: 1em auto;
+    padding: 0.5em;
+
+}
+
+
+/* media query pantalla horizontal */
+@media (orientation: landscape) {
+	body {
+		background: url(fondo-menu2.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+		justify-content: center;
+		align-items: center;
+		margin: 0px auto;
+		display: flex;
+	}
 }
